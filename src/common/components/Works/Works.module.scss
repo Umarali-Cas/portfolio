@@ -1,0 +1,102 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background: #1a1e2380;
+  padding: 100px 20px;
+  .title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 112%;
+    text-transform: capitalize;
+    color: var(--brand-1);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--brand-1);
+    position: relative;
+    margin-bottom: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      bottom: -6px;
+      width: 10px;
+      height: 10px;
+      background: var(--brand-1);
+      border-radius: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      bottom: -6px;
+      width: 10px;
+      height: 10px;
+      background: var(--brand-1);
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+    color: var(--white);
+    margin: 10px 0 50px;
+  }
+
+  &__box{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px;
+      border-radius: 8px;
+      gap: 50px;
+      margin-top: 50px;
+      width: 85%;
+      background: #1a1e2380;
+      position: relative;
+      margin: 50px 0;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -1;
+        background: linear-gradient(
+          135deg,
+          var(--brand-1),
+          var(--grey),
+          var(--brand-1)
+        );
+        background-size: 300% 300%;
+        animation: borderGradient 10s linear infinite;
+        border-radius: inherit;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+        padding: 1px;
+      }
+  }
+}
+
+@keyframes borderGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }

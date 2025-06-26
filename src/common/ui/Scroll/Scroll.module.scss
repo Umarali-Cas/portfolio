@@ -1,0 +1,22 @@
+.line_container {
+  position: relative;
+  height: 2px;
+  width: 85%;
+  overflow: hidden;
+
+  .animated_line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--grey);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1s ease-out;
+  }
+
+  &.visible .animated_line {
+    transform: scaleX(1);
+  }
+}
