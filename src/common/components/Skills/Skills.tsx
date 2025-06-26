@@ -41,6 +41,7 @@ export default function Skills() {
                   style={{ backgroundColor: skill.col }}
                 >
                   <Image
+                    className={styles.image}
                     src={skill.icon}
                     alt={skill.name}
                     width={40}

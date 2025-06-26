@@ -26,13 +26,21 @@ export function HeroCard() {
           </div>
         ))}
         <div className={styles.skills}>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>React</span>
+          <div className={styles.skills__title}>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>React</span>
+          </div>
+          <div className={styles.skills__title}>
+            <span>JavaScript</span>
+          </div>
         </div>
       </div>
-      <a className={styles.down} href="/files/CV_Umarali Omorov_Frontend(en).pdf" download="CV_Umaraliomorov_Frontend(en).pdf">
+      <a
+        className={styles.down}
+        href="/files/CV_Umarali Omorov_Frontend(en).pdf"
+        download="CV_Umaraliomorov_Frontend(en).pdf"
+      >
         <button className={styles.download}>
           Download CV
           <Image

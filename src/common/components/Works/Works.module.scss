@@ -5,6 +5,13 @@
   margin: 0 auto;
   background: #1a1e2380;
   padding: 100px 20px;
+
+  @media (max-width: 850px) {
+    padding: 50px 10px;
+    
+  }
+
+
   .title {
     font-family: var(--font-family);
     font-weight: 400;
@@ -61,6 +68,11 @@
       background: #1a1e2380;
       position: relative;
       margin: 50px 0;
+
+      @media (max-width: 600px) {
+        padding: 20px;
+        
+      }
       
       &::before {
         content: "";
