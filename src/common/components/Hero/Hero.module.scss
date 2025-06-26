@@ -38,7 +38,8 @@
         clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
         transform: translate(-2px, -2px);
         color: var(--brand-2);
-        text-shadow: 0 0 5px var(--brand-2), 0 0 15px var(--brand-2), 0 0 30px var(--brand-1);
+        text-shadow: 0 0 5px var(--brand-2), 0 0 15px var(--brand-2),
+          0 0 30px var(--brand-1);
       }
 
       @media (max-width: 800px) {
@@ -120,29 +121,34 @@
           font-size: 14px;
           line-height: 129%;
           color: var(--brand-2);
-          
         }
         h1 {
-          text-align: left;
-          padding-left: 30px;
-          font-family: var(--font-family);
-          font-weight: 400;
-          font-size: 64px;
-          line-height: 112%;
-          text-transform: capitalize;
-          color: var(--white);
-          margin: 0;
+          display: flex;
+          flex-direction: column;
 
-          @media (max-width: 700px) {
-            font-size: 45px;
-          }
+          span {
+            font-size: 64px;
+            text-align: left;
+            padding-left: 30px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 112%;
+            text-transform: capitalize;
+            color: var(--white);
+            margin: 0;
 
-          @media (max-width: 500px) {
-            font-size: 35px;
-          }
-
-          @media (max-width: 400px) {
-            font-size: 25px;
+            @media (max-width: 700px) {
+              font-size: 45px;
+            }
+  
+            @media (max-width: 500px) {
+              font-size: 35px;
+            }
+  
+            @media (max-width: 400px) {
+              font-size: 25px;
+            }
           }
 
           .name {
@@ -153,19 +159,19 @@
             line-height: 112%;
             text-transform: capitalize;
             color: var(--brand-1);
+            padding: 0;
 
-            
-          @media (max-width: 700px) {
-            font-size: 45px;
-          }
+            @media (max-width: 700px) {
+              font-size: 45px;
+            }
 
-          @media (max-width: 500px) {
-            font-size: 35px;
-          }
+            @media (max-width: 500px) {
+              font-size: 35px;
+            }
 
-          @media (max-width: 400px) {
-            font-size: 25px;
-          }
+            @media (max-width: 400px) {
+              font-size: 25px;
+            }
           }
         }
       }
@@ -193,7 +199,7 @@
       font-family: var(--second-family);
       font-weight: 500;
       font-size: 32px;
-      line-height: 131%;
+      line-height: 100%;
       text-transform: capitalize;
       color: var(--brand-1);
       display: flex;
@@ -202,17 +208,17 @@
       padding-left: 20px;
       margin-top: 20px;
       cursor: pointer;
-      max-width: 270px;
+      max-width: 340px;
 
-      h2{
-        font-size: 30px;
+      h2 {
+        font-size: 25px;
 
-        @media (max-width: 400px) {
-          font-size: 25px;
+        @media (max-width: 500px) {
+          font-size: 20px;
         }
 
         @media (max-width: 350px) {
-          font-size: 20px;
+          font-size: 14px;
         }
       }
     }

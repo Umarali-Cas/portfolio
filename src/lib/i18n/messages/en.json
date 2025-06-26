@@ -1,0 +1,18 @@
+{
+  "Hero": {
+    "title": {
+      "h1": {
+        "up": "Hey",
+        "center": "I'm"
+      },
+      "p": "I help businesses grow by creating amazing web experiences. If you are looking for a developer who loves to get things done, I am the perfect fit for you.",
+      "talk": "Let's talk"
+    },
+    "subtitle": "Web-Developer",
+    "card": {
+      "name": "Umarali",
+      "profession": "Front-end Developer",
+      "button": "Download CV"
+    }
+  }
+}

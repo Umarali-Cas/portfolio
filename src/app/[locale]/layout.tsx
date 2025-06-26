@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Ubuntu, IBM_Plex_Mono } from "next/font/google";
 import '@/styles/global.scss';
+import { getMessages } from "next-intl/server";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Header } from "@/common/components/Header";
+import { notFound } from "next/navigation";
+import { ReactNode } from "react";
+import { routing } from "@/lib/i18n/routing";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 const ubuntu = Ubuntu({
-  weight: ["400", "500", "700"], // выбери нужные веса
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-family",
 });
@@ -33,16 +38,28 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params,
+}: {
+  children: ReactNode;
+  params: { locale: string };
+}) {
+  const locale = params.locale;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages(); // ✅ Получаем переводы на сервере
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} ${ibmPlexMono.variable}`}>
-        <Header />
-        {children}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
