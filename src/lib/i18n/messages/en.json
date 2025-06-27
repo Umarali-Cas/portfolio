@@ -1,0 +1,45 @@
+{
+  "Hero": {
+    "subtitle": "Web-Developer",
+    "card": {
+      "name": "Umarali",
+      "profession": "Front-end Developer",
+      "button": "Download CV"
+    },
+    "title": {
+      "h1": {
+        "up": "Hey",
+        "center": "I'm"
+      },
+      "p": "I help businesses grow by creating amazing web experiences. If you are looking for a developer who loves to get things done, I am the perfect fit for you.",
+      "talk": "Let's talk"
+    }
+  },
+  "AboutMe": {
+    "title": "About me",
+    "hello": "Hello!",
+    "one":"My name is Umarali and I specialize in web development that utilizes",
+    "skills": "HTML, CSS, JS",
+    "and": "and ",
+    "react": "REACT ",
+    "etc": "etc.",
+    "description": "I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.",
+    "hobby": "When I'm not coding, I am",
+    "hobbySkills": "learning new technologies,",
+    "hobbySkills2": "reading, or picking up some new hands-on art project like",
+    "hobbySkills3": "Drawing.",
+    "perspective": "I like to have my perspective and belief systems challenged so that I see the world through new eyes."
+  },
+  "Skills": {
+    "title": "Skills",
+    "desc": "I'm striving to never stop learning and improving!"
+  },
+  "Works": {
+    "title": "Works",
+    "desc": "I had the pleasure of working with these awesome projects"
+  },
+  "Footer": {
+    "title": "Portfolio",
+    "desc": "This is my personal portfolio website where I share my projects and experience in web development. I am constantly updating it to showcase my latest work and skills."
+  }
+}

@@ -5,8 +5,11 @@ import styles from "./AboutMe.module.scss";
 import aboutImage from "#/images/aboutMe.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function AboutMe() {
+  const t = useTranslations("AboutMe");
+
   return (
     <section className={styles.aboutMe}>
       <Scroll />
@@ -19,25 +22,22 @@ export default function AboutMe() {
       >
         <div className={styles.me}>
           <div className={styles.titleWrapper}>
-            <h1 className={styles.txt} data-text="About Me">
-              About Me
+            <h1 className={styles.txt} data-text={t("title")}>
+              {t("title")}
             </h1>
           </div>
           <div className={styles.title}>
             <span>{"<p>"}</span>
             <p>
-              <span className={styles.hello}>Hello!</span> <br /> My name is
-              Umarali and I specialize in web developement that utilizes{" "}
-              <span>HTML</span>, <span>CSS</span>, <span>JS</span>, <br /> and{" "}
-              <span>REACT</span> etc. <br /> <br /> I am a highly motivated
-              individual and eternal optimist dedicated to writing clear, <br />
-              concise, robust code that works. Striving to never stop learning
-              and improving. <br /> <br /> When I`m not coding, I am{" "}
-              <span>writing bolgs</span>, reading, or picking up some new
-              hands-on <br /> art project like <span>photography</span>. <br />{" "}
-              <br />
-              like to have my perspective and belief systems challenged so that
-              I see the world <br /> through new eyes.
+              <span className={styles.hello}>{t("hello")}</span> <br /> <br />
+              {t("one")} <span>{t("skills")}</span> <br />
+              {t("and")}
+              <span>{t("react")}</span>
+              {t("etc")} <br /> <br />
+              {t("description")} <br /> <br />
+              {t("hobby")} <span>{t("hobbySkills")}</span>
+              {t("hobbySkills2")} <span>{t("hobbySkills3")}</span> <br /> <br />
+              {t("perspective")}
             </p>
             <span>{"</p>"}</span>
           </div>
