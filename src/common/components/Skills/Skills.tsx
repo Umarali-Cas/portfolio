@@ -5,8 +5,12 @@ import { mySkill } from "./Skills.helpers";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
+
+  const t = useTranslations("Skills");
+
   return (
     <section className={styles.skills}>
       <motion.div
@@ -21,9 +25,9 @@ export default function Skills() {
             {"</>"}
           </h1>
           <h1 className={styles.title} data-text="Skills">
-            Skills
+            {t("title")}
           </h1>
-          <p>I am striving to never stop learning and improving</p>
+          <p>{t("desc")}</p>
         </div>
 
         <motion.div

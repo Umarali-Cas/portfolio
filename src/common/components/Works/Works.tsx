@@ -6,8 +6,12 @@ import { sites } from "./Works.helpers";
 import { Scroll } from "@/common/ui/Scroll";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Works() {
+
+  const t = useTranslations("Works")
+
   return (
     <motion.section
       className={styles.works}
@@ -16,8 +20,8 @@ export default function Works() {
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      <h1 className={styles.title}>Works</h1>
-      <p>I had the pleasure of working with these awesome projects</p>
+      <h1 className={styles.title}>{t("title")}</h1>
+      <p>{t("desc")}</p>
       <Scroll />
       <motion.div
         className={styles.works__box}

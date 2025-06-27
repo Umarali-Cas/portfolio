@@ -16,7 +16,7 @@ export default function Hero() {
       className={styles.hero}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className={styles.titleWrapper}>
@@ -32,7 +32,7 @@ export default function Hero() {
             <h1>
               <span>{t("title.h1.up")}</span>
               <span>{t("title.h1.center")} <span className={styles.name}>{t("card.name")}</span></span>
-              <span>{t("subtitle")}</span>
+              <span className={styles.prof}>{t("subtitle")}</span>
             </h1>
             <span>{"</h1>"}</span>
           </div>

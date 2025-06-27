@@ -8,6 +8,11 @@ import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import { routing } from "@/lib/i18n/routing";
 
+interface RootLayoutProps {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,24 +43,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: ReactNode;
-  params: { locale: string };
-}) {
-  const locale = params.locale;
+export default async function RootLayout({ children, params }: RootLayoutProps) {
+  const locale = (await params).locale;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const messages = await getMessages(); // ✅ Получаем переводы на сервере
+  const messages = await getMessages(); // Получаем переводы на сервере
 
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} ${ibmPlexMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} ${ibmPlexMono.variable}`}
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           {children}
