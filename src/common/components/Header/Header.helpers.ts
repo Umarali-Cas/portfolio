@@ -2,12 +2,6 @@ import linkedIn from "#/icons/linkedIn.svg";
 import telegram from "#/icons/telegram.svg";
 import github from "#/icons/github.svg";
 
-// export const icons = [
-//   linkedIn,
-//   telegram,
-//   github,
-// ];
-
 export const icons = [
     {
       src: linkedIn,
@@ -17,7 +11,7 @@ export const icons = [
     {
       src: telegram,
       name: "Telegram",
-      url: "https://t.me/cas_your_angel"
+      url: "https://t.me/it_is_painful"
     },
     {
       src: github,

@@ -43,7 +43,7 @@ export default function Hero() {
             </p>
             <span>{"</p>"}</span>
           </div>
-          <a href="https://t.me/cas_your_angel" className={styles.talk}>
+          <a href="https://t.me/it_is_painful" className={styles.talk}>
             <h2>{t("title.talk")}</h2>
             <Image src={telegram} alt="mail" width={20} height={20} />
           </a>

@@ -21,7 +21,7 @@ export const icons = [
         },
         {
             src: telegram,
-            name: "@cas_your_angel",
-            url: "https://t.me/cas_your_angel"
+            name: "@it_is_painful",
+            url: "https://t.me/it_is_painful"
         },
     ];
