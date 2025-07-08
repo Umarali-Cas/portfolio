@@ -11,6 +11,8 @@ import vite from "#/icons/vite.svg";
 import docker from "#/icons/docker.svg";
 import redux from "#/icons/redux.svg";
 import sass from "#/icons/sass.svg";
+import tailwind from "#/icons/tailwind.svg";
+import zustand from "#/icons/zustand.svg";
 
 export const mySkill = [
   {
@@ -29,7 +31,13 @@ export const mySkill = [
     name: "Sass",
     icon: sass,
     col: "#910c79",
-    to: "https://sass-lang.com/",
+    to: "https://sass-lang.com",
+  },
+  {
+    name: "tailwind",
+    icon: tailwind,
+    col: "#28A9E2",
+    to: "https://tailwindcss.com",
   },
   {
     name: "JS",
@@ -96,5 +104,11 @@ export const mySkill = [
     icon: redux,
     col: "#CC5DE8",
     to: "https://redux.js.org",
+  },
+  {
+    name: "Zustand",
+    icon: zustand,
+    col: "#4a2d01",
+    to: "https://zustand-demo.pmnd.rs/",
   },
 ];

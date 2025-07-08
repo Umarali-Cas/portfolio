@@ -156,9 +156,20 @@
         line-height: 131%;
         text-align: center;
         text-transform: capitalize;
-
+        
+        -webkit-text-stroke: 0.5px white;
+        text-stroke: 0.5px white;
+        
+        text-shadow: 
+          0 0 10px var(--grey),
+          0 0 10px var(--grey),
+          0 0 10px var(--grey),
+          0 0 2px white; 
+      
         @media (max-width: 600px) {
           font-size: 20px;
+          -webkit-text-stroke: 0.2px white;
+          text-stroke: 0.2px white;
         }
       }
     }
